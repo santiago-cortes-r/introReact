@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Card from './componentes/Card'
 import './App.css'
+import PracticaDeCards from './componentes/practicaDeCards'
 
 function App() {
   const [count, setCount] = useState(0)
   const items = ['React', 'JavaScript', 'Vite']
-
+  const ArrayDeTecnologias = [
+    { id: 101, valor: 'React' },
+    { id: 102, valor: 'JavaScript' },
+    { id: 103, valor: 'Vite' }
+  ];
   return (
     <>
       <div>
@@ -30,10 +36,13 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <section>
+        <Card title="Card Title" description="This is a description of the card." />
+        <Card title="Esta es una reutilizacion" description="estoy reutilizando cards." />
+        <PracticaDeCards Completados={5} Total={10} />
         <h2>Items</h2>
         <ul>
-          {items.map((item, index) => (
-            <li key={index}>{item}</li>
+          {ArrayDeTecnologias.map((tecnologia) => (
+            <li key={tecnologia.id}>{tecnologia.valor}</li>
           ))}
         </ul>
       </section>
