@@ -11,9 +11,10 @@ function App() {
   const ArrayDeTecnologias = [
     { id: 101, valor: 'React' },
     { id: 102, valor: 'JavaScript' },
-    { id: 103, valor: 'Vite' }
+    { id: 103, valor: 'Vite' } // es un array con diccionarios
   ];
   return (
+
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
